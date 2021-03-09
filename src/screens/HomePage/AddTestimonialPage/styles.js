@@ -13,6 +13,9 @@ export const AddTestimonyFormWrap = styled.div`
   overflow-x: hidden;
 
   .addTestimonyCard {
+    @media (max-width: 500px) {
+      height: 1000px;
+    }
     h3 {
       font-weight: 700;
       font-size: 28px;
@@ -142,9 +145,6 @@ export const AddTestimonyFormWrap = styled.div`
         justify-content: center;
       }
     }
-  }
-  @media (max-width: 500px) {
-    height: 1000px;
   }
 
   .MuiRadio-colorSecondary.Mui-checked {
