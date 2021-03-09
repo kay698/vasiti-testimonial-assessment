@@ -1,4 +1,4 @@
-import React from "react";
+
 import Image from "../assets/EllipseOne.png"
 
 export const TestimonyList = [

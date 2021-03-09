@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import { FirstTestimonialSessionWrap } from "./styles";
 import Typography from "@material-ui/core/Typography";
@@ -14,7 +14,7 @@ const FirstTestimonialSession = ({ hadleShowModal }) => {
       >
         <FlexibleDiv width="max-content" className="imageSection">
           <FlexibleDiv className="imageWrap">
-            <img alt="girls image" src={Girls} />
+            <img alt="girls" src={Girls} />
           </FlexibleDiv>
         </FlexibleDiv>
         <FlexibleDiv

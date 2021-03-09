@@ -45,7 +45,7 @@ const SecondTestimonialSession = ({ hadleShowModal }) => {
           height="580px"
         >
           <FlexibleDiv className="imageWrap">
-            <img alt="girls image" src={Girl} />
+            <img alt="girls" src={Girl} />
           </FlexibleDiv>
         </FlexibleDiv>
       </FlexibleDiv>

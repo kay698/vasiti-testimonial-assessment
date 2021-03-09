@@ -24,7 +24,7 @@ const HeroSection = () => {
         </FlexibleDiv>
         <FlexibleDiv width="max-content" height="500px" className="imageSection">
           <FlexibleDiv className="imageWrap"> 
-            <img alt="hero section image" src={HeroImage}/>
+            <img alt="hero section" src={HeroImage}/>
           </FlexibleDiv>
         </FlexibleDiv>
       </FlexibleDiv>
