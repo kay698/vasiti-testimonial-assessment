@@ -42,6 +42,13 @@ const FirstTestimonialSession = ({ hadleShowModal }) => {
           >
             SHARE YOUR OWN STORY!
           </p>
+            <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M -80 50 Q 100 -70 1000 100"
+                stroke="rgb(250, 116, 7)"
+                fill="transparent"
+              />
+            </svg>
         </FlexibleDiv>
       </FlexibleDiv>
     </FirstTestimonialSessionWrap>

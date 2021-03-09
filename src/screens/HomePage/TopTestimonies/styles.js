@@ -22,12 +22,12 @@ export const TopTestimoniesWrap = styled.div`
     }
   }
 
-  @media(max-width : 600px){
+  @media(max-width : 900px){
     .testimonyContent{
       width: 40%;
     }
   }
-  @media(max-width : 900px){
+  @media(max-width : 600px){
     .testimonyContent{
       width: 90%;
     }

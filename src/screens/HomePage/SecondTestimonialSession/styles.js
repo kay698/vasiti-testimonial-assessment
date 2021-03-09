@@ -42,6 +42,8 @@ export const SecondTestimonialSessionWrap = styled.div`
     color: #ff5c00;
     transition: all 0.3s ease;
     cursor: pointer;
+    padding: 0;
+    margin: 0;
 
     :hover {
       opacity: 0.5;

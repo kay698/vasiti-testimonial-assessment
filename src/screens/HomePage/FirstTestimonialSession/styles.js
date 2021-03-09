@@ -39,9 +39,10 @@ export const FirstTestimonialSessionWrap = styled.div`
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+    padding: 0;
+    margin: 0;
     color: #ffffff;
     transition: all 0.3s ease;
-    padding-bottom: 14px;
     cursor: pointer;
   
 
@@ -157,4 +158,6 @@ export const FirstTestimonialSessionWrap = styled.div`
       height: 380px;
     }
   }
+
+ 
 `;
