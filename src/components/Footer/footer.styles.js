@@ -6,6 +6,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "auto",
     flexDirection: "column",
     justifyContent: "center",
+    marginTop: "100px",
   },
   footerGrid__HeaderSection: {
     backgroundColor: "inherit",
