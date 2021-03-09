@@ -48,7 +48,7 @@ const Footer = () => {
                 <MenuList>
                   {list.items.map((item, idx) => (
                     <MenuItem key={idx}>
-                      <a>{item}</a>
+                      <a href="/">{item}</a>
                     </MenuItem>
                   ))}
                 </MenuList>

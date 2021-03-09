@@ -32,7 +32,7 @@ const Header = () => {
           <ul>
             {MainNavItems.map((list) => (
               <li>
-                <a href={list.to}>{list.item}</a>
+                <a href="/">{list.item}</a>
               </li>
             ))}
           </ul>
@@ -52,7 +52,7 @@ const Header = () => {
         <ul> 
           {SubNavItems.map((list) => (
             <li>
-              <a href={list.to}>{list.item}</a>
+              <a href="/">{list.item}</a>
             </li>
           ))}
         </ul>
