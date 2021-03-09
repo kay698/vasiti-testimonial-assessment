@@ -32,6 +32,20 @@ export const TopTestimoniesWrap = styled.div`
       width: 90%;
     }
   }
+  .imageWrap{
+    width: 200px;
+    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius : 100%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius : 100%;
+    }
+  }
 `;
 
 

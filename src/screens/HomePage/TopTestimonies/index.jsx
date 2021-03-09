@@ -17,7 +17,7 @@ const TopTestimonies = () => {
                 flexDir="column"
                 alignItems="flex-start"
               >
-                <div>
+                <div  className="imageWrap">
                   <img src={item.image} alt="testifier" />
                 </div>
                 <FlexibleDiv justifyContent="flex-start" height="80px">
