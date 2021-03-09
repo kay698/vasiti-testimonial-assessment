@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <>
-      <Grid container container className={classes.footerGrid}>
+      <Grid container className={classes.footerGrid}>
         <Grid container className={classes.footerGrid__HeaderSection}>
           <Grid className={classes.imageWrap}>
             <div className={classes.imageWrap__container}>
