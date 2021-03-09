@@ -4,7 +4,7 @@ export const HeroSectionWrap = styled.div`
   width: 100%;
   height: max-content;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 160px;
   h3 {
     height: 180px;
     width: 586px;
@@ -126,7 +126,7 @@ export const HeroSectionWrap = styled.div`
       width: 320px;
     }
     h6 {
-      font-size: 13px;
+    font-size:13px;
     }
   }
 `;

@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 const BottomTestimonies = () => {
   return (
     <BottomTestimoniesWrap>
-      <FlexibleDiv justifyContent="space-evenly">
+      <FlexibleDiv justifyContent="space-evenly" >
         {TestimonyList.map(
           (item) =>
             !item.location && (
@@ -31,7 +31,7 @@ const BottomTestimonies = () => {
                     {item.type}
                   </span>
                 </FlexibleDiv>
-                <Typography>{item.content}</Typography>
+                <Typography className="mainText">{item.content}</Typography>
               </FlexibleDiv>
             )
         )}
