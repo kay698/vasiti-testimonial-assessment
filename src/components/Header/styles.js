@@ -4,7 +4,7 @@ export const HeaderWrap = styled.div`
   width: 100vw;
   height: max-content;
   z-index: 1000000;
-  transition: 300ms ease-in-out;
+  /* transition: 300ms ease-in-out; */
   position: fixed;
   background-color: white;
   right: 0;
