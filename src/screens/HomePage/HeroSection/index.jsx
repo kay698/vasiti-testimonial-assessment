@@ -2,7 +2,7 @@ import React from "react";
 import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import { HeroSectionWrap } from "./styles";
 import Typography from "@material-ui/core/Typography";
-import HeroImage from "../../../assets/hero.png"
+import HeroImage from "../../../assets/hero_pic.png"
 
 const HeroSection = () => {
   return (

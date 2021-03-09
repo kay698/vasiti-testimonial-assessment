@@ -2,7 +2,7 @@ import React from "react";
 import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import { FirstTestimonialSessionWrap } from "./styles";
 import Typography from "@material-ui/core/Typography";
-import Girls from "../../../assets/secondSection.png";
+import Girls from "../../../assets/girls_pic.png";
 
 const FirstTestimonialSession = ({ hadleShowModal }) => {
   return (

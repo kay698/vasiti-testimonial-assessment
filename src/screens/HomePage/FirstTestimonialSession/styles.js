@@ -41,6 +41,7 @@ export const FirstTestimonialSessionWrap = styled.div`
     text-transform: uppercase;
     color: #ffffff;
     transition: all 0.3s ease;
+    padding-bottom: 14px;
     cursor: pointer;
   
 
