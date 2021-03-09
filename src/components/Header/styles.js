@@ -4,7 +4,6 @@ export const HeaderWrap = styled.div`
   width: 100vw;
   height: max-content;
   z-index: 1000000;
-  /* transition: 300ms ease-in-out; */
   position: fixed;
   background-color: white;
   right: 0;
@@ -58,7 +57,7 @@ export const HeaderWrap = styled.div`
     @media (max-width: 720px) {
       justify-content: flex-start;
       border-bottom: none;
-      height: 120px;
+      height: 100px;
     }
   }
 
@@ -110,7 +109,7 @@ export const HeaderWrap = styled.div`
       justify-content: center;
       height: 100%;
       margin-left: 0 !important;
-     
+
       li {
         cursor: pointer;
         position: relative;
@@ -121,7 +120,6 @@ export const HeaderWrap = styled.div`
         @media (max-width: 1000px) {
           padding-right: 30px;
         }
-        
 
         ::before {
           position: absolute;

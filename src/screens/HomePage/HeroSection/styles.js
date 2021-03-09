@@ -125,5 +125,8 @@ export const HeroSectionWrap = styled.div`
     h3 {
       width: 320px;
     }
+    h6 {
+      font-size: 13px;
+    }
   }
 `;
