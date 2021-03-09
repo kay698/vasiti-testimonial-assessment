@@ -1,52 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
-import { throttle } from "lodash";
+import React from "react";
 import { HeaderWrap } from "./styles";
 import { FlexibleDiv } from "../FlexBox/styles";
 import { CustomButton } from "../Buttons";
 import { MainNavItems } from "../../helpers/HeaderNav/headerMainNav";
+import {SubNavItems} from "../../helpers/HeaderNav/headerSubNav"
 import Logo from "../../assets/logo.png";
 
 const Header = () => {
-  const [navBackground, setNavBackground] = useState(false);
-
-  const navRef = useRef();
-  navRef.current = navBackground;
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const show = window.scrollY > 60;
-      if (navRef.current !== show) {
-        setNavBackground(show);
-      }
-    };
-    document.addEventListener("scroll", throttle(handleScroll, 100));
-    return () => {
-      document.removeEventListener("scroll", throttle(handleScroll, 100));
-    };
-  }, []);
-
   return (
-    <HeaderWrap
-      style={{
-        backgroundColor: navBackground ? "#97958fc1" : "transparent",
-        transition: ".3s ease",
-      }}
-    >
+    <HeaderWrap>
+
+      {/* top header nav with signup button */}
       <FlexibleDiv
         justifyContent="space-around"
         alignItems="center"
         height="80px"
         width="100%"
         className="mainNavBar"
+        flexWrap="no-wrap"
       >
         <div className="mainNavBar__imageWrap">
-          <img src={Logo}   alt="vasiti logo"/>
+          <img src={Logo} alt="vasiti logo" />
         </div>
         <FlexibleDiv
           justifyContent="flex-end"
           width="750px"
           height="100%"
           className="mainNavBar__container"
+          flexWrap="no-wrap"
         >
           <ul>
             {MainNavItems.map((list) => (
@@ -63,6 +44,18 @@ const Header = () => {
             <CustomButton text="sign up" click={() => {}} sm />
           </FlexibleDiv>
         </FlexibleDiv>
+      </FlexibleDiv>
+
+
+      {/* sub header nav without button */}
+      <FlexibleDiv className="subNavBar" height="50px" justifyContent="flex-start">
+        <ul> 
+          {SubNavItems.map((list) => (
+            <li>
+              <a href={list.to}>{list.item}</a>
+            </li>
+          ))}
+        </ul>
       </FlexibleDiv>
     </HeaderWrap>
   );

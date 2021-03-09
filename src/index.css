@@ -9,6 +9,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-p {
-  color: rgb(250, 116, 7);
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
 }

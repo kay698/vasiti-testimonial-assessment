@@ -1,3 +1,5 @@
+// nav list itema after the main header with button
+
 export const SubNavItems = [
   
   {
@@ -17,6 +19,6 @@ export const SubNavItems = [
     item: "INTERNSHIPS",
   },
   {
-    item: "EVENTE",
+    item: "EVENTS",
   },
 ]
