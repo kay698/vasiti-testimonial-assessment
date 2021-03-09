@@ -22,7 +22,7 @@ const Footer = () => {
         <Grid container className={classes.footerGrid__HeaderSection}>
           <Grid className={classes.imageWrap}>
             <div className={classes.imageWrap__container}>
-              <img src={PhoneImage} alt="phone image" />
+              <img src={PhoneImage} alt="phone" />
             </div>
           </Grid>
           <Grid className={classes.HeaderSection__textsWrap}>

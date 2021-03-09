@@ -1,5 +1,5 @@
 import React from "react";
-import { TopTestimoniesWrap, TestifierType } from "./styles";
+import { TopTestimoniesWrap} from "./styles";
 import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import { TestimonyList } from "../../../helpers/testimonies";
 import Typography from "@material-ui/core/Typography";
@@ -18,7 +18,7 @@ const TopTestimonies = () => {
                 alignItems="flex-start"
               >
                 <div>
-                  <img src={item.image} alt="testifier image" />
+                  <img src={item.image} alt="testifier" />
                 </div>
                 <FlexibleDiv justifyContent="flex-start" height="80px">
                   <p>{item.location}</p>
