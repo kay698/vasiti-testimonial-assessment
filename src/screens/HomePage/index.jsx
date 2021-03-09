@@ -3,6 +3,7 @@ import { HomePageWrap } from "./styles";
 import HeroSection from "./HeroSection";
 import GeneralLayout from "../../components/Layout";
 import FirstTestimonialSession from "./FirstTestimonialSession";
+import SecondTestimonialSession from "./SecondTestimonialSession";
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <HomePageWrap>
         <HeroSection />
         <FirstTestimonialSession />
+        <SecondTestimonialSession />
       </HomePageWrap>
     </GeneralLayout>
   );
