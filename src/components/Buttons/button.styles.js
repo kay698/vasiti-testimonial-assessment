@@ -8,9 +8,9 @@ export const useStyles = makeStyles((theme) => ({
     color: (props) => (props.color ? props.color : "#FEFEFE"),
     // fontWeight: "bold",
     padding: (props) => (props.sm ? "0.3rem 1rem" : "0.432rem 1.8rem"),
-    height: (props) => (props.sm ? "auto" : "4rem"),
-    width: (props) => (props.sm ? "" : "14rem"),
-    fontSize: (props) => (props.sm ? "0.5" : "0.85rem"),
+    height: (props) => (props.sm ? "auto" : "4.5rem"),
+    width: (props) => (props.sm ? "" : "20rem"),
+    fontSize: (props) => (props.sm ? "0.5" : "1rem"),
     letterSpacing : "0px",
 
     "&:hover": {

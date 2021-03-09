@@ -2,7 +2,11 @@ import React from "react";
 import { AddTestimonyFormWrap } from "./styles";
 import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import Typography from "@material-ui/core/Typography";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
 import AttachmentIcon from "@material-ui/icons/Attachment";
+import { CustomButton } from "../../../components/Buttons";
+import Radio from "@material-ui/core/Radio";
 
 const AddTestimonyForm = () => {
   return (
@@ -10,8 +14,8 @@ const AddTestimonyForm = () => {
       <FlexibleDiv height="100%">
         <FlexibleDiv
           className="addTestimonyCard"
-          width="40%"
-          height="90%"
+          width="100%"
+          height="900px"
           bgColor="white"
           flexDir="column"
         >
@@ -23,7 +27,7 @@ const AddTestimonyForm = () => {
               flexDir="column"
               alignItems="space-between"
             >
-              <span>Upload your Picture</span>
+              <small>Upload your Picture</small>
               <FlexibleDiv
                 className="imageInputWrap"
                 height="70px"
@@ -41,11 +45,54 @@ const AddTestimonyForm = () => {
                   name={"profileImage"}
                 />
               </FlexibleDiv>
-              <FlexibleDiv className="nameWrap" height="120px" justifyContent="space-between">
-                <label htmlFor="firstName">First Name</label>
-                <input type="text" name="firstName" />
-                <label htmlFor="lastName">Last Name</label>
-                <input type="text" name="lastName" />
+              <FlexibleDiv
+                className="nameWrap"
+                height="120px"
+                justifyContent="space-between"
+              >
+                <div>
+                  <label htmlFor="firstName">First Name</label>
+                  <br />
+                  <input type="text" name="firstName" placeholder="" required />
+                </div>
+                <div>
+                  <label htmlFor="lastName">Last Name</label>
+                  <br />
+                  <input type="text" name="lastName" placeholder="" required />
+                </div>
+              </FlexibleDiv>
+              <FlexibleDiv
+                justifyContent="flex-start"
+                height="180px"
+                className="messageWrap"
+                alignItems="center"
+              >
+                <label htmlFor="message">Share your story</label> <br />
+                <textarea name={"message"} placeholder="" required></textarea>
+              </FlexibleDiv>
+              <FlexibleDiv
+                justifyContent="space-between"
+                className="radioSection"
+              >
+                <p>What did you interact with vasiti as?</p>
+                <FlexibleDiv
+                  width="220px"
+                  className="radioWrap"
+                  justifyContent="space-between"
+                >
+                  <FormControlLabel control={<Radio />} label="Customer" />
+                  <FormControlLabel control={<Radio />} label="Vendor" />
+                </FlexibleDiv>
+                <FlexibleDiv justifyContent="flex-start">
+                  <label htmlFor="location">
+                    City or Higher Insitution(for students)
+                  </label>
+                  <br />
+                  <input type="text" name="location" placeholder="" />
+                </FlexibleDiv>
+              </FlexibleDiv>
+              <FlexibleDiv justifyContent="flex-end" height="120px"   className="button_wrap">
+                <CustomButton text="Share Y0ur Story!" click={() => {}} />
               </FlexibleDiv>
             </FlexibleDiv>
           </form>

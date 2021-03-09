@@ -4,6 +4,7 @@ import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import { TestimonyList } from "../../../helpers/testimonies";
 import Typography from "@material-ui/core/Typography";
 
+
 const BottomTestimonies = () => {
   return (
     <BottomTestimoniesWrap>
