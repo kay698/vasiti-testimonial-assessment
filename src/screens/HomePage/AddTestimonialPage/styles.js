@@ -19,9 +19,9 @@ export const AddTestimonyFormWrap = styled.div`
       line-height: 34px;
       letter-spacing: -0.02em;
 
-      @media (max-width: 700px) {
-        margin-top: 80px;
-      }
+      /* @media (max-width: 700px) {
+        margin-top: 40px;
+      } */
     }
     form {
       height: 80%;
@@ -144,7 +144,7 @@ export const AddTestimonyFormWrap = styled.div`
     }
   }
   @media (max-width: 700px) {
-    padding-top: 80px;
+    padding-top: 40px;
   }
 
   .MuiRadio-colorSecondary.Mui-checked {
