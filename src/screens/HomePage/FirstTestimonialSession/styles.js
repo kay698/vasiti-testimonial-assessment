@@ -34,12 +34,19 @@ export const FirstTestimonialSessionWrap = styled.div`
     text-transform: uppercase;
     border-radius: 4px;
   }
-  a {
+  p {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  
+
+    :hover {
+      opacity: 0.5;
+    }
   }
   .imageWrap {
     width: 650px;

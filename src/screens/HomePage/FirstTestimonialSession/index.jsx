@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FlexibleDiv } from "../../../components/FlexBox/styles";
 import { FirstTestimonialSessionWrap } from "./styles";
 import Typography from "@material-ui/core/Typography";
 import Girls from "../../../assets/secondSection.png";
 
-const FirstTestimonialSession = () => {
+const FirstTestimonialSession = ({ hadleShowModal }) => {
   return (
     <FirstTestimonialSessionWrap>
       <FlexibleDiv
@@ -35,7 +35,13 @@ const FirstTestimonialSession = () => {
             very good customer service, an all round great experience. I would
             definately be coming back!
           </Typography>
-          <a>SHARE YOUR OWN STORY!</a>
+          <p
+            onClick={() => {
+              hadleShowModal();
+            }}
+          >
+            SHARE YOUR OWN STORY!
+          </p>
         </FlexibleDiv>
       </FlexibleDiv>
     </FirstTestimonialSessionWrap>

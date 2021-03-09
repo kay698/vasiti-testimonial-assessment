@@ -4,7 +4,7 @@ import { SecondTestimonialSessionWrap } from "./styles";
 import Typography from "@material-ui/core/Typography";
 import Girl from "../../../assets/thirdSection.png";
 
-const SecondTestimonialSession = () => {
+const SecondTestimonialSession = ({ hadleShowModal }) => {
   return (
     <SecondTestimonialSessionWrap>
       <FlexibleDiv
@@ -12,7 +12,6 @@ const SecondTestimonialSession = () => {
         className="bodyWrap"
         justifyContent="space-evenly"
       >
-        
         <FlexibleDiv
           flexDir="column"
           width="max-content"
@@ -20,7 +19,7 @@ const SecondTestimonialSession = () => {
           className="HeaderTextSection"
         >
           <Typography variant={"h4"} className="HeaderSection__headerText">
-          Josiah’s Experience
+            Josiah’s Experience
           </Typography>
           <span>Vendor</span>
           <Typography variant={"h6"}>
@@ -31,10 +30,20 @@ const SecondTestimonialSession = () => {
             very good customer service, an all round great experience. I would
             definately be coming back!
           </Typography>
-          <a>SHARE YOUR OWN STORY!</a>
+          <p
+            onClick={() => {
+              hadleShowModal();
+            }}
+          >
+            SHARE YOUR OWN STORY!
+          </p>
         </FlexibleDiv>
 
-        <FlexibleDiv width="max-content" className="imageSection" height="580px">
+        <FlexibleDiv
+          width="max-content"
+          className="imageSection"
+          height="580px"
+        >
           <FlexibleDiv className="imageWrap">
             <img alt="girls image" src={Girl} />
           </FlexibleDiv>

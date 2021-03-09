@@ -34,12 +34,18 @@ export const SecondTestimonialSessionWrap = styled.div`
     text-transform: uppercase;
     border-radius: 4px;
   }
-  a {
+  p {
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #ff5c00;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    :hover {
+      opacity: 0.5;
+    }
   }
   .imageWrap {
     width: 650px;
@@ -121,17 +127,15 @@ export const SecondTestimonialSessionWrap = styled.div`
       width: 450px;
     }
     .imageWrap {
-     
       width: 340px;
       height: 340px;
       overflow: hidden;
 
-      img{
+      img {
         height: 100%;
         margin-top: 50px;
       }
     }
-    
   }
   @media (max-width: 650px) {
     padding-top: 0;
