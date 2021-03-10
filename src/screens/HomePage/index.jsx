@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HomePageWrap } from "./styles";
 import HeroSection from "./HeroSection";
 import GeneralLayout from "../../components/Layout";
@@ -8,11 +8,15 @@ import TopTestimonies from "./TopTestimonies";
 import BottomTestimonies from "./BottomTestimonies";
 import AddTestimonyForm from "./AddTestimonialPage";
 
+
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
   const hadleShowModal = () => {
     setShowModal(!showModal);
   };
+
+
+
   return (
     <>
       <GeneralLayout>
@@ -24,7 +28,7 @@ const HomePage = () => {
           <BottomTestimonies />
         </HomePageWrap>
       </GeneralLayout>
-      <AddTestimonyForm hadleShowModal={hadleShowModal} showModal={showModal}/>
+      <AddTestimonyForm hadleShowModal={hadleShowModal} showModal={showModal} />
     </>
   );
 };

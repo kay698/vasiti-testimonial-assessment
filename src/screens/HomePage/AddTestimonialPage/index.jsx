@@ -10,6 +10,7 @@ import Radio from "@material-ui/core/Radio";
 import { OverFlowScrollBar } from "../../../components/OverflowScroll/styles";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import { Form, Formik } from "formik";
+import { TestimonyList } from "../../../helpers/testimonies";
 
 const initialValues = {
   userImage: "",
@@ -73,8 +74,8 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
         userImage: imageUrl,
       };
       setSubmitting(false);
+      await   TestimonyList.unshift(values)
       handleShowCongratulatoryModal();
-      console.log(values);
       resetForm();
     } catch (e) {
       setSubmitting(false);

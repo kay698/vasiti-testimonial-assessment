@@ -15,22 +15,28 @@ export const BottomTestimoniesWrap = styled.div`
       line-height: 18px;
       letter-spacing: 0.05em;
     }
-    span{
+    span {
       border-radius: 4px;
       padding: 8px 10px;
     }
+    h6 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.02em;
+      color: #474747;
+      margin-top : 20px;
+    }
   }
 
-  @media(max-width : 900px){
-    .testimonyContent{
+  @media (max-width: 900px) {
+    .testimonyContent {
       width: 40%;
     }
   }
-  @media(max-width : 600px){
-    .testimonyContent{
+  @media (max-width: 600px) {
+    .testimonyContent {
       width: 90%;
     }
   }
 `;
-
-
