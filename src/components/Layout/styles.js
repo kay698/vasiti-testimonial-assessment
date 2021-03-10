@@ -6,6 +6,7 @@ export const GeneralLayoutWrap = styled("div")`
   height: max-content;
   transition: 300ms ease-in-out;
   overflow: hidden;
+  position: relative;
 `
 
 export const LayoutWrapper = styled("div")`

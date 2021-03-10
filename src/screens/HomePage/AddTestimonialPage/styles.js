@@ -255,7 +255,7 @@ export const AddTestimonyFormWrap = styled.div`
       line-height: 28px;
       text-align: center;
       color: #4a4a4a;
-      width : 60%;
+      width: 60%;
       margin: 20px 0;
     }
   }

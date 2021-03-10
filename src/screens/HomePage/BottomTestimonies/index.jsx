@@ -48,7 +48,7 @@ const BottomTestimonies = ({ localStorageItem }) => {
         )}
         {TestimonyList.map(
           (item) =>
-            item.location == "" && (
+            item.location === "" && (
               <FlexibleDiv
                 width="26%"
                 className="testimonyContent"
