@@ -155,7 +155,7 @@ export const AddTestimonyFormWrap = styled.div`
             border: 1px solid #eaeaea;
             box-sizing: border-box;
             border-radius: 8px;
-            .profileImage {
+            .userImage {
               margin-bottom: 0;
             }
             p {
@@ -223,12 +223,40 @@ export const AddTestimonyFormWrap = styled.div`
 
         .MuiRadio-colorSecondary.Mui-checked {
           color: rgb(250, 116, 10);
+          text-transform: capitalize;
+          font-weight: bold;
         }
 
         .title {
           display: none;
         }
       }
+    }
+  }
+
+  .thanksWrap {
+    p {
+      font-weight: bold;
+      font-size: 72px;
+      text-align: center;
+      margin: 0;
+    }
+    h6 {
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      margin-top: 60px;
+    }
+    small {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 28px;
+      text-align: center;
+      color: #4a4a4a;
+      width : 60%;
+      margin: 20px 0;
     }
   }
 `;
