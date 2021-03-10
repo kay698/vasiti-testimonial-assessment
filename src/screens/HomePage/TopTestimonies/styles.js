@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TopTestimoniesWrap = styled.div`
+export const TestimoniesWrap = styled.div`
   width: 100%;
   height: max-content;
   padding-top: 100px;
@@ -13,7 +13,7 @@ export const TopTestimoniesWrap = styled.div`
       line-height: 29px;
       letter-spacing: 0.02em;
       color: #474747;
-      margin-top : 20px;
+      margin-top: 20px;
     }
 
     p {
@@ -22,9 +22,9 @@ export const TopTestimoniesWrap = styled.div`
       font-size: 15px;
       line-height: 18px;
       letter-spacing: 0.05em;
+      margin-right: 30px;
     }
     span {
-      margin-left: 30px;
       border-radius: 4px;
       padding: 8px 10px;
     }
@@ -40,7 +40,7 @@ export const TopTestimoniesWrap = styled.div`
       width: 90%;
     }
   }
-  .imageWrap {
+  .userImageDiv {
     width: 200px;
     height: 200px;
     max-width: 200px;

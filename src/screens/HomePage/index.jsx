@@ -1,4 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, {
+  useState,
+  useLayoutEffect,
+  useImperativeHandle,
+  useRef,
+} from "react";
 import { HomePageWrap } from "./styles";
 import HeroSection from "./HeroSection";
 import GeneralLayout from "../../components/Layout";
@@ -7,32 +12,48 @@ import SecondTestimonialSession from "./SecondTestimonialSession";
 import TopTestimonies from "./TopTestimonies";
 import BottomTestimonies from "./BottomTestimonies";
 import AddTestimonyForm from "./AddTestimonialPage";
-// import { TestimonyList } from "../../helpers/testimonies";
+import { TestimonyList } from "../../helpers/testimonies";
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
+  let [localStorageItem, setLocalStorageItem] = useState(undefined);
+  let scrollRef = React.createRef();
+  let ref = useRef();
+
+  useImperativeHandle(ref, () => ({
+    preventBodyScroll() {
+      scrollRef.current.ownerDocument.body.style.overflow = "hidden";
+    },
+    addBodyScroll() {
+      scrollRef.current.ownerDocument.body.style.overflow = "";
+    },
+  }));
   const hadleShowModal = () => {
     setShowModal(!showModal);
   };
+  useLayoutEffect(() => {
+    let list = JSON.parse(localStorage.getItem("item"));
+    setLocalStorageItem(list);
+  }, [setLocalStorageItem]);
 
-  // useEffect(() => {
-  //   let list = JSON.parse(localStorage.getItem("item"));
-  //   list && TestimonyList.unshift(list);
-  //   console.log(list)
-  // }, [TestimonyList]);
-
+  console.log(localStorageItem)
   return (
     <>
-      <GeneralLayout>
+      <GeneralLayout ref={scrollRef}>
         <HomePageWrap>
           <HeroSection />
           <FirstTestimonialSession hadleShowModal={hadleShowModal} />
-          <TopTestimonies />
+          <TopTestimonies localStorageItem={localStorageItem} />
           <SecondTestimonialSession hadleShowModal={hadleShowModal} />
-          <BottomTestimonies />
+          <BottomTestimonies localStorageItem={localStorageItem} />
         </HomePageWrap>
+        <AddTestimonyForm
+          hadleShowModal={hadleShowModal}
+          showModal={showModal}
+          scrollRef={scrollRef}
+          // ref={scrollRef}
+        />
       </GeneralLayout>
-      <AddTestimonyForm hadleShowModal={hadleShowModal} showModal={showModal} />
     </>
   );
 };
