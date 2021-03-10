@@ -24,7 +24,7 @@ const HomePage = () => {
           <BottomTestimonies />
         </HomePageWrap>
       </GeneralLayout>
-      {showModal && <AddTestimonyForm />}
+      <AddTestimonyForm hadleShowModal={hadleShowModal} showModal={showModal}/>
     </>
   );
 };
