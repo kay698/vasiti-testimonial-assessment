@@ -10,7 +10,7 @@ const BottomTestimonies = () => {
       <FlexibleDiv justifyContent="space-evenly">
         {TestimonyList.map(
           (item) =>
-            item.location === "" && (
+            item.location == "" && (
               <FlexibleDiv
                 width="26%"
                 className="testimonyContent"

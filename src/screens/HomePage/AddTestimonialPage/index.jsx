@@ -10,7 +10,7 @@ import Radio from "@material-ui/core/Radio";
 import { OverFlowScrollBar } from "../../../components/OverflowScroll/styles";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import { Form, Formik } from "formik";
-import { TestimonyList } from "../../../helpers/testimonies";
+
 
 const initialValues = {
   userImage: "",
@@ -41,7 +41,7 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
   const close = () => {
     scrollRef.current.ownerDocument.body.style.overflow = "";
     hadleShowModal();
-    window.location.reload()
+    // window.location.reload()
   };
   const handleShowCongratulatoryModal = (value) => {
     value === false && close();
@@ -75,8 +75,8 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
         userImage: imageUrl,
       };
       setSubmitting(false);
-      await   TestimonyList.unshift(values);
       handleShowCongratulatoryModal();
+      // localStorage.setItem("item", JSON.stringify(values));
       resetForm();
     } catch (e) {
       setSubmitting(false);
@@ -139,6 +139,7 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
                               id={"userImage"}
                               name={"userImage"}
                               onChange={getImage}
+                              required
                             />
                           </FlexibleDiv>
                           <FlexibleDiv
@@ -197,6 +198,7 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
                               name="customerType"
                               value={radioValue}
                               onChange={handleRadioValue}
+                              required
                             >
                               <FlexibleDiv
                                 width="220px"
