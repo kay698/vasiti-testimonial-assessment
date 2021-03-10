@@ -41,6 +41,7 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
   const close = () => {
     scrollRef.current.ownerDocument.body.style.overflow = "";
     hadleShowModal();
+    window.location.reload()
   };
   const handleShowCongratulatoryModal = (value) => {
     value === false && close();
@@ -74,7 +75,7 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
         userImage: imageUrl,
       };
       setSubmitting(false);
-      await   TestimonyList.unshift(values)
+      await   TestimonyList.unshift(values);
       handleShowCongratulatoryModal();
       resetForm();
     } catch (e) {
