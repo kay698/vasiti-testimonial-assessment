@@ -1,7 +1,7 @@
 import React from "react";
 import { TestimoniesWrap } from "../TopTestimonies/styles";
-import { FlexibleDiv } from "../../../components/FlexBox/styles";
-import { TestimonyList } from "../../../helpers/testimonies";
+import { FlexibleDiv } from "../../../../components/FlexBox/styles";
+import { TestimonyList } from "../../../../helpers/testimonies";
 import Typography from "@material-ui/core/Typography";
 
 const BottomTestimonies = ({ localStorageItem }) => {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AddTestimonyFormWrap = styled.div`
+export const ModalWrap = styled.div`
   position: fixed;
   top: 0;
   left: 0;

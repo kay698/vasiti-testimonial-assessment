@@ -4,8 +4,8 @@ import HeroSection from "./HeroSection";
 import GeneralLayout from "../../components/Layout";
 import FirstTestimonialSession from "./FirstTestimonialSession";
 import SecondTestimonialSession from "./SecondTestimonialSession";
-import TopTestimonies from "./TopTestimonies";
-import BottomTestimonies from "./BottomTestimonies";
+import TopTestimonies from "./PeoplesTestimonies/TopTestimonies";
+import BottomTestimonies from "./PeoplesTestimonies/BottomTestimonies";
 import AddTestimonyForm from "./AddTestimonialPage";
 
 const HomePage = () => {
@@ -14,6 +14,9 @@ const HomePage = () => {
 
   const hadleShowModal = () => {
     setShowModal(!showModal);
+  };
+  const handleGetItems = (item) => {
+    setLocalStorageItem(item);
   };
   useLayoutEffect(() => {
     let list = JSON.parse(localStorage.getItem("item"));
@@ -30,7 +33,12 @@ const HomePage = () => {
           <BottomTestimonies localStorageItem={localStorageItem} />
         </HomePageWrap>
       </GeneralLayout>
-      <AddTestimonyForm hadleShowModal={hadleShowModal} showModal={showModal} />
+      <AddTestimonyForm
+        hadleShowModal={hadleShowModal}
+        showModal={showModal}
+        handleGetItems={handleGetItems}
+        setLocalStorageItem={setLocalStorageItem}
+      />
     </>
   );
 };
