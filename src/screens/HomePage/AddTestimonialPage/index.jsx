@@ -152,7 +152,7 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
                       >
                         <CustomButton
                           text="Share Y0ur Story!"
-                          click={() => {}}
+                          click={() => {handleShowCongratulatoryModal()}}
                         />
                       </FlexibleDiv>
                     </FlexibleDiv>
@@ -162,7 +162,10 @@ const AddTestimonyForm = ({ hadleShowModal, showModal }) => {
             </div>
           </div>
         ) : (
-          <div></div>
+          <FlexibleDiv>
+              <div>🎉</div>
+              <Typography  variant={"h5"}>Thank you for sharing your story!</Typography>
+          </FlexibleDiv>
         )}
       </div>
     </AddTestimonyFormWrap>
