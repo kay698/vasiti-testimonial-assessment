@@ -10,18 +10,25 @@ import AddTestimonyForm from "./AddTestimonialPage";
 
 const HomePage = () => {
   const [showModal, setShowModal] = useState(false);
-  let [localStorageItem, setLocalStorageItem] = useState(undefined);
+  const [showCongratulatoryModal, setShowCongratulatoryModal] = useState(false);
+  const [localStorageItem, setLocalStorageItem] = useState(undefined);
 
-  const hadleShowModal = () => {
+  const hadleShowModal = (value) => {
     setShowModal(!showModal);
+    value === false && setShowCongratulatoryModal(false);
   };
-  const handleGetItems = (item) => {
-    setLocalStorageItem(item);
+  //function to display thanks modal and fetch item from local storage
+  const handleShowCongratulatoryModal = async () => {
+    let list = JSON.parse(localStorage.getItem("item"));
+    await setLocalStorageItem(list);
+    await setShowCongratulatoryModal(!showCongratulatoryModal);
   };
+
   useLayoutEffect(() => {
     let list = JSON.parse(localStorage.getItem("item"));
     setLocalStorageItem(list);
   }, [setLocalStorageItem]);
+
   return (
     <>
       <GeneralLayout showModal={showModal}>
@@ -36,8 +43,9 @@ const HomePage = () => {
       <AddTestimonyForm
         hadleShowModal={hadleShowModal}
         showModal={showModal}
-        handleGetItems={handleGetItems}
-        setLocalStorageItem={setLocalStorageItem}
+        handleShowCongratulatoryModal={handleShowCongratulatoryModal}
+        showCongratulatoryModal={showCongratulatoryModal}
+        // setLocalStorageItem={setLocalStorageItem}
       />
     </>
   );

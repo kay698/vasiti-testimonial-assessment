@@ -32,7 +32,7 @@ const SecondTestimonialSession = ({ hadleShowModal }) => {
           </Typography>
           <p
             onClick={() => {
-              hadleShowModal();
+              hadleShowModal(false);
             }}
           >
             SHARE YOUR OWN STORY!

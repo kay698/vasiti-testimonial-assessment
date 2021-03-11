@@ -23,20 +23,14 @@ const initialValues = {
 const AddTestimonyForm = ({
   hadleShowModal,
   showModal,
-  setLocalStorageItem,
+  showCongratulatoryModal,
+  handleShowCongratulatoryModal,
 }) => {
-  let [showCongratulatoryModal, setShowCongratulatoryModal] = useState(false);
-  let [imageUrl, setImageUrl] = useState("");
-  let [formValue, setFormValue] = useState({});
-  let [radioValue, setRadioValue] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [formValue, setFormValue] = useState({});
+  const [radioValue, setRadioValue] = useState("");
 
-  //function to display thanks modal
-  const handleShowCongratulatoryModal = async (value) => {
-    let list = JSON.parse(localStorage.getItem("item"));
-    await setLocalStorageItem(list);
-    await setShowCongratulatoryModal(!showCongratulatoryModal);
-    value === false && hadleShowModal();
-  };
+ 
 
   //function to fetch radio value and set to radio value state
   const handleRadioValue = (event) => {
